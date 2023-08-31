@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { Container, Form, Row, Col, Button, Alert} from "react-bootstrap"
 import useCategory from "../hooks/useCategory";
+import useBeverage from "../hooks/useBeverage";
 
 const Formulary = () => {
 
    const {categories} = useCategory();
+   const {fetchBeverage} = useBeverage();
 
    const [query, setQuery] = useState({
     beverageName: "",
@@ -26,6 +28,7 @@ const Formulary = () => {
         return
     }
     console.log("submiting")
+    fetchBeverage(query)
   }
 
 
