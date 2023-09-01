@@ -27,7 +27,6 @@ const Formulary = () => {
         setAlertMsg("All fields are mandatory")
         return
     }
-    console.log("submiting")
     fetchBeverage(query)
   }
 

@@ -1,5 +1,5 @@
 import useBeverage from "../hooks/useBeverage"
-import { Container, Row, Col } from "react-bootstrap"
+import { Row } from "react-bootstrap"
 import Beverage from "./Beverage";
 
 const ListBeverages = () => {
