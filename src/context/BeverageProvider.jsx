@@ -15,7 +15,7 @@ const BeverageProvider = ({children}) => {
     async function fetchBeverage (query) {
         const {beverageName, category} = query;
         try {
-            const url = `http://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${beverageName}&c=${category}`
+            const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${beverageName}&c=${category}`
             const {data} = await axios(url)
             setBeverages(data.drinks)
         } catch (error) {
@@ -36,7 +36,7 @@ const BeverageProvider = ({children}) => {
         //id is the beverageId
         setIsLoading(true)
         try {
-            const url = `http://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`
+            const url = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`
             const {data} = await axios(url)
             setBeverageReceipt(mappedBeverageReceipt(data.drinks[0]))
             
