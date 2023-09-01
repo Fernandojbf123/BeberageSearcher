@@ -5,7 +5,7 @@ const Beverage = ({beverage}) => {
 
   const {idDrink} = beverage;
 
-  const {handleModalClick, getBeverageId, fetchBeverageReceipt} = useBeverage();
+  const {handleModalClick, getBeverageId, fetchBeverageReceipt, } = useBeverage();
 
 
 
